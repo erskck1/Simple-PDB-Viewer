@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.*?>
+<?import visualization.controller.LoadingView?>
+<fx:root xmlns:fx="http://javafx.com/fxml" type="javafx.scene.layout.BorderPane"
+         stylesheets="@css/SecondaryViewPlugin.css">
+    <center>
+        <BorderPane fx:id="nothingLoadedPane" style="-fx-background-color:darkgray">
+            <center>
+                <LoadingView fx:id="loadingView"/>
+            </center>
+        </BorderPane>
+    </center>
+    <fx:define>
+        <StackPane fx:id="mainView" maxHeight="Infinity" maxWidth="Infinity" pickOnBounds="false" minWidth="200"
+                   minHeight="200">
+            <BorderPane style="-fx-background-color:darkgray">
+                <center>
+                    <Pane fx:id="objectsPane" maxWidth="Infinity" maxHeight="Infinity"
+                          style="-fx-background-color:darkgray">
+                        <Group fx:id="objectsGroup">
+                        </Group>
+                    </Pane>
+                </center>
+                <padding>
+                    <Insets top="10" left="10" right="10" bottom="10"/>
+                </padding>
+            </BorderPane>
+        </StackPane>
+    </fx:define>
+</fx:root>

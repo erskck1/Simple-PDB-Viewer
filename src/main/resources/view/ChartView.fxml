@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="190.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8.0.121" fx:controller="visualization.controller.ChartViewController">
+    <children>
+        <BarChart fx:id="bc" style="-fx-stroke-width: 100px" prefHeight="228.0" prefWidth="590.0"
+                  AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+            <xAxis>
+                <CategoryAxis fx:id="yAxis" side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" fx:id="xAxis"/>
+            </yAxis>
+        </BarChart>
+    </children>
+
+</AnchorPane>

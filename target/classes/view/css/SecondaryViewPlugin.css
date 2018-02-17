@@ -1,0 +1,21 @@
+/*noinspection CssUnusedSymbol*/
+.aminoacid-circle {
+    -fx-stroke: black;
+    -fx-stroke-width: 1;
+}
+
+.bond {
+    -fx-stroke-width: 4;
+}
+
+/*noinspection CssUnusedSymbol*/
+.bond.watson-crick {
+    -fx-stroke: red;
+    -fx-stroke-line-cap: round;
+}
+
+/*noinspection CssUnusedSymbol*/
+.bond.spine {
+    -fx-stroke: black;
+    -fx-stroke-line-cap: round;
+}

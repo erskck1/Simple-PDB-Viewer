@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="150" xmlns="http://javafx.com/javafx/8.0.121"
+      fx:controller="visualization.controller.BorderPaneBottomController">
+    <SplitPane fx:id="splitPane" dividerPositions="0.3, 0.6">
+        <items>
+            <fx:include fx:id="chartView" maxHeight="Infinity" maxWidth="Infinity" source="ChartView.fxml"/>
+            <fx:include fx:id="toolBar" maxHeight="Infinity" maxWidth="Infinity" source="ToolBarView.fxml"/>
+            <fx:include fx:id="pdbView" maxHeight="Infinity" maxWidth="Infinity" source="PdbView.fxml"/>
+        </items>
+    </SplitPane>
+</VBox>

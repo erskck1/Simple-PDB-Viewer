@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import visualization.plugin.SecondaryViewPlugin?>
+<?import visualization.plugin.SequenceViewPlugin?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" xmlns="http://javafx.com/javafx/8.0.121"
+            fx:controller="visualization.controller.BorderPaneController">
+    <top>
+        <GridPane>
+            <SplitPane GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <items>
+                    <fx:include fx:id="menuView" source="MenuView.fxml"/>
+                </items>
+            </SplitPane>
+            <SplitPane GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <items>
+                    <ScrollPane fitToWidth="true" prefHeight="36.0" prefWidth="4298.0">
+                        <content>
+                            <SequenceViewPlugin fx:id="sequenceView"/>
+                        </content>
+                    </ScrollPane>
+                </items>
+            </SplitPane>
+            <columnConstraints>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </top>
+
+    <center>
+        <VBox maxHeight="Infinity" maxWidth="Infinity">
+            <GridPane maxHeight="Infinity" maxWidth="Infinity" VBox.vgrow="ALWAYS">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints percentHeight="100.0" vgrow="ALWAYS"/>
+                </rowConstraints>
+                <SplitPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-4.0"
+                           AnchorPane.topAnchor="0.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <items>
+                        <!-- -->
+                        <SecondaryViewPlugin fx:id="secondaryView" maxWidth="Infinity" maxHeight="Infinity"/> <!-- -->
+                    </items>
+                </SplitPane>
+                <SplitPane GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <fx:include fx:id="visualizationView" maxHeight="Infinity" maxWidth="Infinity"
+                                source="VisualizationView.fxml" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                </SplitPane>
+            </GridPane>
+        </VBox>
+    </center>
+
+    <bottom>
+        <fx:include fx:id="borderPaneBottomView" source="BorderPaneBottomView.fxml"/>
+    </bottom>
+
+</BorderPane>

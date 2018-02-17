@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<HBox xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx"
+      fx:controller="visualization.controller.MenuController"
+      fx:id="menuView">
+
+    <children>
+        <MenuBar fx:id="menuBar">
+            <Menu fx:id="file" text="File">
+                <MenuItem fx:id="selectLocalFile" text="Load a file from Computer" onAction="#selectLocalFile"/>
+                <SeparatorMenuItem/>
+                <MenuItem fx:id="close" text="Close" onAction="#close"/>
+            </Menu>
+            <Menu fx:id="edit" text="Edit">
+                <MenuItem fx:id="undo" text="Undo" onAction="#undo"/>
+                <MenuItem fx:id="redo" text="Redo" onAction="#redo"/>
+                <MenuItem fx:id="selectAll" text="Select All" onAction="#selectAll"/>
+                <MenuItem fx:id="selectNone" text="Select None" onAction="#selectNone"/>
+            </Menu>
+
+            <Menu fx:id="view" text="View">
+                <MenuItem fx:id="edgePlus" text="Edge++" onAction="#edgePlus"/>
+                <MenuItem fx:id="edgeMinus" text="Edge--" onAction="#edgeMinus"/>
+                <MenuItem fx:id="nodePlus" text="Node++" onAction="#nodePlus"/>
+                <MenuItem fx:id="nodeMinus" text="Node--" onAction="#nodeMinus"/>
+            </Menu>
+        </MenuBar>
+    </children>
+</HBox>

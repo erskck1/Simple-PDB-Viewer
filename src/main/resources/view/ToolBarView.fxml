@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          xmlns="http://javafx.com/javafx"
+          fx:controller="visualization.controller.ToolBarController" minWidth="200">
+    <ComboBox fx:id="modeSelect" layoutX="16.0" layoutY="95.0" prefHeight="13.0" prefWidth="181.0" promptText="Mode"
+              GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <RadioButton fx:id="radioAtom" GridPane.columnIndex="1" GridPane.rowIndex="0" layoutX="124.0" layoutY="270.0"
+                 mnemonicParsing="false" selected="true" text="Atom"/>
+    <RadioButton fx:id="radioAminoacid" GridPane.columnIndex="1" GridPane.rowIndex="1" layoutX="124.0" layoutY="292.0"
+                 mnemonicParsing="false" text="Amino Acid"/>
+    <RadioButton fx:id="radioChain" GridPane.columnIndex="1" GridPane.rowIndex="2" layoutX="124.0" layoutY="314.0"
+                 mnemonicParsing="false" text="Chain"/>
+</GridPane>
